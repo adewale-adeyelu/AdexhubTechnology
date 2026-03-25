@@ -1,6 +1,6 @@
 import { DiDotnet } from "react-icons/di";
 import { NavLink } from "react-router";
-import HeroImg from "../assests/hero-illustration.png"
+import HeroImg from "../assests/hero-img.png";
 import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,9 +15,9 @@ export default function Hero() {
   }, []);
   return (
     <section id="home" className="px-5 md:px-10 lg:px-16 bg-[hsl(220_60%_12%)]">
-      <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center pt-20">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center pt-20 pb-10">
         {/* 1st grid */}
-        <div className="pt-16 lg:pt-32 xl:pt-24 pb-13">
+        <div className="pt-24 lg:pt-32 xl:pt-24 pb-5 md:pb-0">
           <div data-aos="zoom-in">
             <span className="inline-flex items-center px-3 py-1 text-md font-medium text-[#1ebb70] bg-[#06202A] border border-[#1ebb70] rounded-full">
               <span className="w-2 h-2 mr-2 bg-[#1ebb70] rounded-full"></span>
@@ -43,7 +43,7 @@ export default function Hero() {
 
         {/* 2nd grid */}
         <div className="items-center" data-aos="zoom-in">
-          <img src={HeroImg} alt="hero" className="w-full" />
+          <img src={HeroImg} alt="hero" className="relative animate md:my-8 z-10 justify-center items-center place-content-center max-w-full h-auto object-contain" />
         </div>
       </div>
     </section>

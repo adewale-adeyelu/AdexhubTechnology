@@ -8,3 +8,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+.animate {
+    animation: slide 5s ease-in-out 1s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(.3rem);
+    }
+    50% {
+        transform: translateY(2rem);
+    }
+    100% {
+        transform: translateY(.3rem);
+    }
+}

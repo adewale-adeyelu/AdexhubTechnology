@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Menu-icon */}
           <div className="lg:hidden">
             <button onClick={() => setOpen(true)}>
-              <FaBars className="text-xl" />
+              <FaBars className="text-xl me-2" />
             </button>
           </div>
         </div>
@@ -70,19 +70,19 @@ export default function Navbar() {
 
           {/* Menu box */}
           <div className="bg-white w-[90%] max-w-md rounded-xl p-6 space-y-5 transform transition duration-600">
-            <a href="#home" onClick={() => setOpen(false)} className="block text-sm font-medium text-[#1ebb70]">
+            <a href="#home" onClick={() => setOpen(false)} className="block text-md font-medium text-[#1ebb70]">
               Home
             </a>
-            <a href="#services" onClick={() => setOpen(false)} className="block text-sm font-medium text-[#6a7181] hover:text-[#1ebb70]">
+            <a href="#services" onClick={() => setOpen(false)} className="block text-md font-medium text-[#6a7181] hover:text-[#1ebb70]">
               Services
             </a>
-            <a href="#faq" onClick={() => setOpen(false)} className="block text-sm font-medium text-[#6a7181] hover:text-[#1ebb70]">
+            <a href="#faq" onClick={() => setOpen(false)} className="block text-md font-medium text-[#6a7181] hover:text-[#1ebb70]">
               FAQ
             </a>
-            <a href="#register" onClick={() => setOpen(false)} className="block text-sm font-medium text-[#6a7181] hover:text-[#1ebb70]">
+            <a href="#register" onClick={() => setOpen(false)} className="block text-md font-medium text-[#6a7181] hover:text-[#1ebb70]">
               How It Works
             </a>
-            <a href="#contact" onClick={() => setOpen(false)} className="block text-sm font-medium text-[#6a7181] hover:text-[#1ebb70]">
+            <a href="#contact" onClick={() => setOpen(false)} className="block text-md font-medium text-[#6a7181] hover:text-[#1ebb70]">
               Contact
             </a>
             <div className="flex justify-between items-center mt-3">
