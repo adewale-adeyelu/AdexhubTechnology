@@ -2,7 +2,7 @@ import Logo from "~/assests/adexhub-logo.png";
 
 export default function ForgotPassword() {
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center px-3 md:px-0">
+        <div className="bg-gray-100 min-h-screen pt-24 md:pt-0 flex items-start md:items-center justify-center px-3 md:px-0">
             <form className="bg-white p-6 md:p-8 rounded-lg shadow-md w-full max-w-md">
                 <div className="flex justify-center items-center space-x-1">
                     <div>

@@ -24,7 +24,7 @@ export default function Contact() {
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-8 items-center mt-10">
-        <div className="space-y-5" data-aos="fade-right" data-aos-delay="100">
+        <div className="space-y-5" data-aos="fade-left" data-aos-delay="100">
           {/* 1st grid */}
             <div className="flex space-x-2 items-center">
               <div className="bg-emerald-50 p-4 rounded-2xl">
@@ -56,7 +56,7 @@ export default function Contact() {
           </div>
 
           {/* 2nd grid */}
-          <div data-aos="fade-left" data-aos-delay="100">
+          <div data-aos="fade-right" data-aos-delay="100">
             {/* 1st input */}
             <div className="flex space-x-2 items-center mb-4">
               <input type="name" name="name" placeholder="Your Name" className="text-[#0F172A] w-full border border-slate-300 rounded-2xl p-3 leading-6 text-sm focus:border-[#1ebb70] focus:ring-2 focus:ring-[#1ebb70]/20 outline-none" />
