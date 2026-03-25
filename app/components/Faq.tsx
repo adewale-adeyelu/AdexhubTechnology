@@ -18,7 +18,7 @@ export default function Faq() {
   };
   return (
     <section id="faq" className="px-5 md:px-10 lg:px-16 py-10">
-      <div className="text-center" data-aos="fade-up">
+      <div className="text-center mb-8 md:mb-0" data-aos="fade-up">
         <p className="text-[#1ebb70] text-lg font-bold">
           FAQ
         </p>
@@ -29,7 +29,7 @@ export default function Faq() {
           Welcome to our FAQ section! Whether you're looking to purchase airtime, order data, get data pins, <br className="hidden md:block" /> or pay for electricity and TV subscriptions, ADEXHUB has got you covered. 💡📱📡
         </p>
       </div>
-      <div className="grid md:grid-cols-2 items-center gap-6 md:gap-10 mt-[-24] relative">
+      <div className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-6 md:gap-10 mt-[-24] relative">
         {/* grid 1 */}
         <div className="flex flex-col" data-aos="fade-right" data-delay="100">
           {/* Item 1 */}
