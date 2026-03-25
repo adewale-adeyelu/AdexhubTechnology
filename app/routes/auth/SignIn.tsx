@@ -60,10 +60,7 @@ export default function SignIn() {
                   {checked && <Check size={16} className="text-white text-md" />}
                 </div>
 
-                <span
-                  onClick={() => setChecked(!checked)}
-                  className="ml-2 text-sm text-gray-700 cursor-pointer"
-                >
+                <span onClick={() => setChecked(!checked)} className="ml-2 text-sm text-gray-700 cursor-pointer">
                   Remember me
                 </span>
               </div>
