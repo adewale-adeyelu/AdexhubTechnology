@@ -16,7 +16,7 @@ export default function Register() {
         <p className="text-[#1ebb70] text-lg font-bold">
           How To Register
         </p>
-        <h2 className="text-[#0F172A] font-bold text-lg md:text-4xl mt-1 md:mt-2 tracking-tight">
+        <h2 className="text-[#0F172A] font-bold text-xl md:text-4xl mt-1 md:mt-2 tracking-tight">
           Just 3 Easy Steps
         </h2>
       </div>

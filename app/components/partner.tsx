@@ -16,6 +16,9 @@ export default function Register() {
   return (
     <section className="px-5 md:px-10 lg:px-16 py-13">
         <div className="text-center" data-aos="fade-up">
+          <p className="text-[#1ebb70] text-lg font-bold">
+            Partners
+          </p>
             <h1 className="text-[#0F172A] font-bold text-xl md:text-2xl mt-1 md:mt-2 tracking-tight">
                 Our Trusted Partners
             </h1>
