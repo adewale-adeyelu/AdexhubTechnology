@@ -1,5 +1,6 @@
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
+
 export default [
   index("./routes/landing/route.tsx"), 
   route("login", "routes/auth/SignIn.tsx"),
