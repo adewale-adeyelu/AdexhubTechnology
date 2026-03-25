@@ -126,7 +126,7 @@ export default function Footer() {
       </div>
       <div className="w-full h-px bg-[#6a7181] mt-7"></div>
       <div className="text-center mt-10">
-        <p className="text-md font-medium text-[#6a7181]">&copy; 2026 My Website. All rights reserved.</p>
+        <p className="text-md font-medium text-[#6a7181]">&copy; 2026 Adexhub all rights reserved.</p>
       </div>
 
       <div className="fixed bottom-6 right-6 z-50">
