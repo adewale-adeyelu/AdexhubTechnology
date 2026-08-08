@@ -80,7 +80,7 @@ export default function Services() {
         <h2 className="text-[#0F172A] font-bold text-lg md:text-4xl mt-1 md:mt-2 tracking-tight">
           Everything You Need, One Platform
         </h2>
-        <p className="text-[#64748B] text-sm md:text-md font-normal mt-2 md:mt-4 leading-6">
+        <p className="text-[#64748B] text-sm md:text-md px-1 md:px-0 font-normal mt-2 md:mt-4 leading-6">
           At Adexhub, we simplify your everyday payments. From airtime and data to electricity and <br className='hidden md:block' /> TV subscriptions, enjoy reliable and secure transactions at your fingertips.
         </p>
       </div>

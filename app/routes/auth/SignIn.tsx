@@ -71,7 +71,7 @@ export default function SignIn() {
           </div>
 
           {/* submit btn */}
-          <button type="submit" className="w-full bg-[#1ebb70] text-white py-3 px-4 rounded-md hover:bg-[#1ebb70] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mt-0">
+          <button type="submit" className="w-full bg-[#1ebb70] text-white py-3 px-4 rounded-md hover:bg-[#1ebb70] focus:outline-none focus:ring-2 focus:ring-[#1ebb70] focus:ring-offset-2 mt-0">
               Login
           </button>
           

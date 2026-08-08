@@ -31,7 +31,7 @@ export default function ForgotPassword() {
                     <input type="email" name="email" placeholder="Enter Email" className="text-[#0F172A] w-full border border-slate-300 rounded-xl p-3 leading-6 text-sm focus:border-[#1ebb70] focus:ring-2 focus:ring-[#1ebb70]/20 outline-none mt-2" />
 
                     {/* submit btn */}
-                    <button type="submit" className="w-full bg-[#1ebb70] text-white py-3 px-4 rounded-md hover:bg-[#1ebb70] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mt-2">
+                    <button type="submit" className="w-full bg-[#1ebb70] text-white py-3 px-4 rounded-md hover:bg-[#1ebb70] focus:outline-none focus:ring-2 focus:ring-[#1ebb70] focus:ring-offset-2 mt-2">
                         Reset Password
                     </button>
 
