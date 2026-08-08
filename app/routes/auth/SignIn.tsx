@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { Eye, EyeOff } from "lucide-react";
 import { useNavigate } from "react-router";
 import baas from "lib/kroxt";
+import type { AuthSession } from "@kroxt/baas-sdk";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function SignIn() {
 
     setIsLoading(true);
     try {
-      const response = await baas.auth.login({
+      const response: AuthSession = await baas.auth.login({
         email: email,
         password: password,
       });

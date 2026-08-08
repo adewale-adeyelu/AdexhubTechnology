@@ -9,13 +9,20 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false)
 
+  interface Contact {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) return;
 
     setIsLoading(true);
     try {
-      const contacts = baas.collection("contacts");
+      const contacts = baas.collection<Contact>("contacts");
       const newContact = await contacts.create({
         name: name,
         email: email,

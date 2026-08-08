@@ -1,41 +1,41 @@
 import { useState, useEffect } from "react";
 import baas from "lib/kroxt";
 import { ArrowDownRight, ChevronRight, CircleArrowRight, Info, X } from "lucide-react";
+import type { KroxtUser, AuthSession } from "@kroxt/baas-sdk";
 
 export default function Hero() {
     const [fundWalletOpen, setFundWalletOpen] = useState(false);
     const [withdrawOpen, setWithdrawOpen] = useState(false);
-    const [user, setUser] = useState<any>(null);
+    const [user, setUser] = useState<KroxtUser | null>(null);
+
+    interface ApiResponse<T> {
+        success: boolean;
+        message: string;
+        data: T;
+    }
 
     useEffect(() => {
-        // Try getting user from localStorage for instant display
-        const storedUser = localStorage.getItem("user");
-        if (storedUser) {
+        const fetchUser = async () => {
             try {
-                setUser(JSON.parse(storedUser));
-            } catch (err) {
-                console.error("Failed to parse stored user", err);
-            }
-        }
-
-        // Fetch fresh details from SDK
-        baas.auth.me()
-            .then((res) => {
-                if (res) {
-                    setUser(res);
-                    localStorage.setItem("user", JSON.stringify(res));
+                // 1. Fetch and cast the envelope
+                const response: KroxtUser | null = await baas.auth.me();
+                console.log("Full SDK Response Envelope:", response);
+                // 2. Access the data directly and update the state
+                if (response) {
+                    setUser(response);
                 }
-            })
-            .catch((err) => {
-                console.error("Failed to get authenticated user", err);
-            });
+            } catch (err) {
+                console.error("Failed to fetch user:", err);
+            }
+        };
+        fetchUser();
     }, []);
 
     return (
         <section className="relative lg:left-64 lg:w-[calc(100%-16rem)] w-full px-5 pt-24 py-2">
             <div>
                 <h1 className="font-bold text-2xl md:text-4xl text-[#212529] dark:text-white leading-relaxed">
-                    Hi, {user?.email || user?.displayName || "User"}
+                    Hi, {user?.displayName || "User"}
                     <span className="wave">👋</span>
                 </h1>
                 <p className="text-[#0F172A] dark:text-[#b3b3b3] text-sm md:text-md">

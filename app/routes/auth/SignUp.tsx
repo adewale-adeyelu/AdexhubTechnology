@@ -3,6 +3,7 @@ import Logo from "~/assests/adexhub-logo.png";
 import baas from "lib/kroxt";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import type { AuthSession } from "@kroxt/baas-sdk";
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -22,17 +23,17 @@ const SignUp = () => {
         setIsLoading(true);
 
         try {
-            const session = await baas.auth.register({
+            const response: AuthSession = await baas.auth.register({
                 email: email,
                 password: password,
                 displayName: name,
                 metadata: { role: "user", phone: phone },
-            });
+            })
 
-            if (session && session.user) {
-                localStorage.setItem("accessToken", session.accessToken);
-                localStorage.setItem("refreshToken", session.refreshToken);
-                localStorage.setItem("user", JSON.stringify(session.user));
+            if (response && response.user) {
+                localStorage.setItem("accessToken", response.accessToken);
+                localStorage.setItem("refreshToken", response.refreshToken);
+                localStorage.setItem("user", JSON.stringify(response.user));
                 alert("Authentication successful! 🎉");
                 navigate("/dashboard");
             } else {
