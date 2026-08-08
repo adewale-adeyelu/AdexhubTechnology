@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import Logo from "~/assests/adexhub-logo.png";
 import { NavLink } from "react-router";
+import baas from "lib/kroxt";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -16,6 +17,11 @@ export default function Navbar() {
         document.documentElement.classList.remove("dark");
         }
     }, [darkMode]);
+
+    const logout = async () => {
+        await baas.auth.logout();
+    }
+    
     return (
         <section className="fixed top-0 lg:left-64 lg:w-[calc(100%-16rem)] w-full bg-white dark:bg-gray-900 px-3 py-3 md:py-4 md:px-6 z-40 flex items-center transition-colors border-b border-gray-300 dark:border-slate-800 shadow-md">
             <div className="flex justify-between items-center w-full">
@@ -49,7 +55,7 @@ export default function Navbar() {
                     <NavLink to="/dashboard/Pricing" className="flex items-center gap-1 text-sm text-[#6a7181] dark:text-slate-300 hover:text-[#1ebb70]">
                         <Wallet size={20} className="font-light" /> Pricing
                     </NavLink>
-                    <NavLink to="/login" className="flex items-center gap-1 text-sm hover:text-red-500 text-[#6a7181] dark:text-red-500">
+                    <NavLink onClick={logout} to="/login" className="flex items-center gap-1 text-sm hover:text-red-500 text-[#6a7181] dark:text-red-500">
                         <User size={20} className="font-light" /> Log Out
                     </NavLink>
                 </div>
