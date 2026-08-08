@@ -69,14 +69,9 @@ export default function SignIn() {
         <div className="space-y-5 mt-6">
           {/* email */}
           <label className="text-[#374151] text-md font-medium">
-            email
+            Email
           </label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Email"
-            onChange={(e) => setEmail(e.target.value)}
-            className="text-[#0F172A] w-full border border-slate-300 rounded-xl p-3 leading-6 text-sm focus:border-[#1ebb70] focus:ring-2 focus:ring-[#1ebb70]/20 outline-none mt-2" />
+          <input type="email" name="email" placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} className="text-[#0F172A] w-full border border-slate-300 rounded-xl p-3 leading-6 text-sm focus:border-[#1ebb70] focus:ring-2 focus:ring-[#1ebb70]/20 outline-none mt-2" />
 
           {/* password */}
           <div className="w-full relative">
