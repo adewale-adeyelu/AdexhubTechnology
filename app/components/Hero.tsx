@@ -2,18 +2,9 @@ import { DiDotnet } from "react-icons/di";
 import { NavLink } from "react-router";
 import HeroImg from "../assests/hero-img.png";
 import { ArrowRight } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import React from 'react';
 
 export default function Hero() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   return (
     <section id="home" className="relative flex flex-col justify-between overflow-hidden px-5 md:px-10 lg:px-16 bg-[hsl(220_60%_12%)]">
       <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center pt-24 pb-10 md:pb-16">

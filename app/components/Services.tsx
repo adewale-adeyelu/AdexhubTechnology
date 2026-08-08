@@ -1,9 +1,5 @@
 import React from 'react';
 import { Wifi, Key, Zap } from 'lucide-react';
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 interface ServiceProps {
   title: string;
   description: string;
@@ -41,12 +37,6 @@ const ServiceCard: React.FC<ServiceProps> = ({
 };
 
 export default function Services() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   const services = [
     {
       title: "Buy Data/Airtime",

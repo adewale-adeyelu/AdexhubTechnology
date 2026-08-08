@@ -1,17 +1,7 @@
 import { ArrowUp, Facebook, Instagram } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import Logo from "~/assests/adexhub-logo.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 export default function Footer() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   return (
     <footer className="px-5 md:px-10 lg:px-16 py-16 bg-[hsl(220_60%_12%)]" data-aos="fade-up">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

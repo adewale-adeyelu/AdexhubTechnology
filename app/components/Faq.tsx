@@ -1,16 +1,7 @@
 import { useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import faq from "../assests/faq-img.png";
 
 export default function Faq() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {

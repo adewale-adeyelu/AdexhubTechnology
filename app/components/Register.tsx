@@ -1,15 +1,5 @@
 import { CircleCheck } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 export default function Register() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   return (
     <section id="register" className="px-5 md:px-10 lg:px-16 py-16 bg-[#f8fafc]">
       <div className="text-center mb-12" data-aos="fade-up">

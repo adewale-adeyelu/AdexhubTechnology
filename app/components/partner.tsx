@@ -2,17 +2,7 @@ import Img1 from "~/assests/partner-img-1.png";
 import Img2 from "~/assests/partner-img-2.png";
 import Img3 from "~/assests/partner-img-3.png";
 import Img4 from "~/assests/partner-img-4.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 export default function Register() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   return (
     <section className="px-5 md:px-10 lg:px-16 py-13">
         <div className="text-center" data-aos="fade-up">
