@@ -5,6 +5,7 @@ export default [
   route("login", "routes/auth/SignIn.tsx"),
   route("signup", "routes/auth/SignUp.tsx"),
   route("forgotpassword", "routes/auth/ForgotPassword.tsx"),
+  route("OTP", "routes/auth/OTP.tsx"),
 
   // ✅ Dashboard layout with children
   route("dashboard", "routes/dashboard/route.tsx", [

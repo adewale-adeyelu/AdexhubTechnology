@@ -1,4 +1,4 @@
-import { Eye, EyeOff, Info } from "lucide-react";
+import { Check, Eye, EyeOff, Info } from "lucide-react";
 import Logo from "~/assests/adexhub-logo.png";
 import baas from "lib/kroxt";
 import { useState } from "react";
@@ -15,6 +15,7 @@ const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [checked, setChecked] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -51,7 +52,7 @@ const SignUp = () => {
     return (
         <div className="bg-gray-100 min-h-screen pt-16 pb-10 md:pt-0 flex items-start md:items-center justify-center px-3 md:px-0">
             <form onSubmit={handleSubmit} className="bg-white p-6 md:p-8 rounded-lg shadow-md w-full max-w-md">
-                <div className="flex justify-center items-center space-x-1 mb-2">
+                <div className="flex justify-center items-center space-x-1">
                     <div>
                         <a href="#home">
                             <img src={Logo} alt="Logo" className="w-13 h-13" />
@@ -64,7 +65,16 @@ const SignUp = () => {
                     </div>
                 </div>
 
-                <div className="space-y-5">
+                <div className="text-center">
+                    <h2 className="text-xl font-semibold text-[#151c2b]">
+                        Welcome to Adexhub
+                    </h2>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                        Create your account and get started <br /> with Adexhub today.
+                    </p>
+                </div>
+
+                <div className="space-y-5 mt-4">
                     {/* <div className="bg-emerald-50 p-4 rounded-2xl flex space-x-1">
                         <Info size={20}  className="text-[#1ebb70]" />
                         <h1 className="text-[#1ebb70] text-sm">
@@ -155,6 +165,19 @@ const SignUp = () => {
                             Passwords match
                         </p>
                     )}
+
+                    <div className="flex items-center">
+                        <div onClick={() => setChecked(!checked)} className={`h-4 w-4 flex items-center justify-center rounded border cursor-pointer transition ${checked ? "bg-[#1ebb70] border-[#1ebb70]" : "border-slate-300 border-2"}`}>
+                        {checked && <Check size={16} className="text-white text-md" />}
+                        </div>
+        
+                        <span onClick={() => setChecked(!checked)} className="ml-2 text-sm text-gray-700 cursor-pointer">
+                            I agree to Adexhub's{" "}
+                            <a href="/terms" className="text-[#1ebb70] hover:underline" onClick={(e) => e.stopPropagation()}>
+                                Terms and Conditions
+                            </a>
+                        </span>
+                    </div>
 
                     {/* submit btn */}
                     <button disabled={isLoading} type="submit" className="w-full bg-[#1ebb70] text-white py-3 px-4 rounded-md hover:bg-[#1ebb70] focus:outline-none focus:ring-2 focus:ring-[#1ebb70] focus:ring-offset-2 mt-2">
