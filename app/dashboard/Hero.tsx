@@ -60,7 +60,7 @@ export default function Hero() {
                                 <h4 className="text-[#B3B3B3] text-lg font-bold">
                                     Wallet Balance
                                 </h4>
-                                <p className="text-white text-lg md:text-3xl font-extrabold">
+                                <p className="text-white text-2xl md:text-3xl font-extrabold">
                                     #2,000,000.00
                                 </p>
                                 <button className="flex items-center gap-1 text-md text-[#1ebb70] cursor-pointer" onClick={() => setFundWalletOpen(true)}>
@@ -118,7 +118,7 @@ export default function Hero() {
                                 <h4 className="text-[#6c757d] dark:text-[#B3B3B3] text-lg font-bold">
                                     Commission
                                 </h4>
-                                <p className="text-[#212529] dark:text-white text-lg md:text-3xl font-bold">
+                                <p className="text-[#212529] dark:text-white text-2xl md:text-3xl font-bold">
                                     #100,000.00
                                 </p>
                                 <button className="dark:text-[#1ebb70] cursor-pointer flex items-center gap-1 text-md text-[hsl(220_60%_12%)]" onClick={() => setWithdrawOpen(true)}>
