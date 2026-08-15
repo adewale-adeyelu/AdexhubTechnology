@@ -26,7 +26,7 @@ export default function Hero() {
               </p>
             </div>
             <div className="pt-7">
-              <NavLink to="/signup" className="text-md text-white bg-[#1ebb70] inline-flex shadow-md py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:translate-x-1">
+              <NavLink to="/login" className="text-md text-white bg-[#1ebb70] inline-flex shadow-md py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:translate-x-1">
                 Get Started <ArrowRight className="ml-2"/>
               </NavLink>
             </div>
